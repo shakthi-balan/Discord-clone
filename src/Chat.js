@@ -33,7 +33,7 @@ function Chat() {
     },[channelId]);
 
     const sendMessage = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
 
         db.collection('channels').doc(channelId).collection('messages')
         .add({
