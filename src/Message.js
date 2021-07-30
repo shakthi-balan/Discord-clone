@@ -12,7 +12,7 @@ function Message( { timestamp, message ,  user }) {
                 <h4>
                     {user.displayName}
                     <span className = "message__timestamp">
-                        {new Date(timestamp?.toDate()).toUTCString()}
+                        {new Date(timestamp?.toDate()).toLocaleString(undefined, {timeZone: 'Asia/Kolkata'})}
                     </span>
                 </h4>
                 <p>{message} </p>
